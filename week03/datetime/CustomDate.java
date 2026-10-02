@@ -1,9 +1,9 @@
 package datetime;
 
 public class CustomDate {
-    int month;
-    int day;
-    int year;
+    private int month;
+    private int day;
+    private int year;
 
     public CustomDate(int month, int day, int year){
         setMonth(month);
