@@ -1,8 +1,10 @@
+package invoice;
+
 public class Invoice {
-        String partNumber;
-        String partDescription;
-        int quantity;
-        double pricePerItem;
+        private String partNumber;
+        private String partDescription;
+        private int quantity;
+        private double pricePerItem;
 
         //constructor
         public Invoice(String number, String description, int quantity, double price){
