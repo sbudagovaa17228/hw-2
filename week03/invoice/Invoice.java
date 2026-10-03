@@ -25,11 +25,13 @@ public class Invoice {
         }
 
         void set_quantity(int quantity){
-            this.quantity = quantity;
-
+                this.quantity = quantity;
+            
         }
+        
         void set_pricePerItem(double price){
-            this.pricePerItem = price;
+                this.pricePerItem = price;
+
         }
         //getters
 
@@ -40,19 +42,21 @@ public class Invoice {
             return partDescription;
         }
         int get_quantity(){
-            return quantity;
+            if(this.quantity<0){
+                return 0;
+            } else{
+               return quantity;
+            }
         }
         double get_pricePerItem(){
-            return pricePerItem;
+            if(pricePerItem<0){
+               return 0.0;
+            } else{
+                return pricePerItem;
+
+            }
         }
 
-        //set quantity to 0 
-        public void set_quantity(){
-            this.quantity = (quantity<0) ? quantity : 0;
-        }
-        public void set_pricePerItem(){
-            this.pricePerItem = (pricePerItem<0) ? pricePerItem : 0;
-        }
 
         //getinvoiceamount
         public double getInvoiceAmount(){
